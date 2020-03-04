@@ -1,0 +1,23 @@
+ //Variables
+ $main-color: #262626;
+ $font-open: 'Open Sans', sans-serif;
+ $bg-color: #E0EEFF;
+ $second-color: #2E5077;
+
+ //Base style
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    background-color: $bg-color;
+    font-family: $font-open;
+    line-height: 1.4;
+}
+
+.showcase{
+    background-color: $main-color;
+    color: #fff; 
+    height: 55.4vh;
+}
