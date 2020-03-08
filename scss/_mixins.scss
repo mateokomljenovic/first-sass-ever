@@ -1,0 +1,24 @@
+ //Variables
+ $main-color: #0472C5;
+ $font-open: 'Open Sans', sans-serif;
+ $bg-color: #609BD6;
+ $second-color: #C0E2FB;
+ $link-color: #B3001B;
+
+
+//Set text color on bg
+
+@function set-text-color($color){
+  @if(lightness($color)>70){
+    @return grey; 
+  } @else{
+    @return #fff; 
+  }
+}
+
+//Background and text color
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color)
+}

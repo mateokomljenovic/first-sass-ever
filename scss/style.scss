@@ -1,11 +1,9 @@
- //Variables
- $main-color: #5C8CBA;
- $font-open: 'Open Sans', sans-serif;
- $bg-color: #609BD6;
- $second-color: #C0E2FB;
- $link-color: #B3001B;
+//dont deploy scss
+@import 'mixins';
+@import 'utils';
+@import 'buttons';
 
- //Base style
+//Base style
  * {
     box-sizing: border-box;
     margin: 0;
@@ -20,6 +18,7 @@
   
   img {
     width: 100%;
+    border-radius: 50%;
   }
   
   a {
@@ -28,7 +27,8 @@
   
   .showcase {
     height: 600px;
-    background-color:$bg-color;
+    @include set-background($bg-color);
+    
   
     nav {
       display: flex;
@@ -45,7 +45,7 @@
       }
   
       a {
-        color: #E0EEFF;
+        color: set-text-color($bg-color);
       }
   
       a:hover {
@@ -67,14 +67,9 @@
       h1 {
         font-size: 50px;
         line-height: 1.2;
+        margin: 10px;
       }
     }
   }
-  
-  .container {
-    max-width: 1100px;
-    padding: 0 30px;
-    margin: 0 auto;
-    overflow: auto;
-  }
 
+@import 'mobile';
